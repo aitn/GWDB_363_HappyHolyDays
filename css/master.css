@@ -1,3 +1,23 @@
 body{
   background: #102a54;
 }
+
+#container {
+	position: relative;
+	margin: 0 auto;		
+}
+
+#christmastree {
+	position: absolute;
+	top: 30%; left: 38%;
+	
+}
+
+h1 {
+	font-family: sans-serif;
+	font-size: 8em;
+	color: crimson;
+	position: absolute;
+	top: 0; left: 25%;
+	
+}
