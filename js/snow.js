@@ -1,6 +1,9 @@
 window.onload = makeItSnow("sky", "white", 25);
 window.onload = makeItSnow("othersky", "white", 25);
 
+var audio = new Audio('../audio/videoplayback.m4a');
+audio.play();
+
 function makeItSnow(canvasId, color, speed){
     
     //get the canvas and context and store in vars

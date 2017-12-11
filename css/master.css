@@ -18,7 +18,9 @@ h1 {
 	font-size: 8em;
 	color: crimson;
 	position: absolute;
-	top: 0; left: 25%;
+    width: 100%;
+    text-align: center;
+	
 }
 
 #sky{
@@ -34,6 +36,7 @@ h1 {
 img{
     position: absolute;
     z-index: 100;
+    margin-top: 300px;
 }
 	
 #othersky{
