@@ -1,5 +1,5 @@
-window.onload = makeItSnow("sky", "white", 25);
-window.onload = makeItSnow("othersky", "white", 25);
+window.onload = makeItSnow("sky", "white");
+window.onload = makeItSnow("othersky", "white");
 
 var audio = new Audio('../audio/videoplayback.m4a');
 audio.play();
@@ -20,7 +20,7 @@ function makeItSnow(canvasId, color, speed){
     ctx.globalCompositeOperation = "destination-over";
     
     //generate the snowflakes and apply attributes
-    var mf = 100; //max flakes
+    var mf = 2000; //max flakes
     var flakes = []
     
     
@@ -71,7 +71,7 @@ function makeItSnow(canvasId, color, speed){
     }
    
     
-    setInterval(drawFlakes, speed);
+    setInterval(drawFlakes, 25);
 }
 
 
