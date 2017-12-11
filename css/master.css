@@ -19,5 +19,24 @@ h1 {
 	color: crimson;
 	position: absolute;
 	top: 0; left: 25%;
+}
+
+#sky{
+    position: absolute;
+    z-index: 50;
+}
 	
+.tree{
+    width: 100%;
+    text-align: center;
+}
+	
+img{
+    position: absolute;
+    z-index: 100;
+}
+	
+#othersky{
+    position: absolute;
+    z-index: 150;
 }

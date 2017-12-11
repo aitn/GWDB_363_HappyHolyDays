@@ -1,8 +1,12 @@
-window.onload = function(){
+window.onload = makeItSnow("sky", "white", 25);
+window.onload = makeItSnow("othersky", "white", 25);
+
+function makeItSnow(canvasId, color, speed){
     
     //get the canvas and context and store in vars
-    var canvas = document.getElementById("sky");
+    var canvas = document.getElementById(canvasId);
     var ctx = canvas.getContext("2d");
+    
     
     //set canvas dims to window height and width
     var W = window.innerWidth;
@@ -31,7 +35,7 @@ window.onload = function(){
     //draw flakes onto canvas
     function drawFlakes(){
         ctx.clearRect(0, 0, W, H);
-        ctx.fillStyle = "white";
+        ctx.fillStyle = color;
         ctx.beginPath();
         for(var i = 0; i < mf; i++){
             var f = flakes[i];
@@ -41,18 +45,7 @@ window.onload = function(){
         ctx.fill();
         moveFlakes();
     }
-    function drawMoreFlakes(){
-        ctx.clearRect(0, 0, W, H);
-        ctx.fillStyle = "yellow";
-        ctx.beginPath();
-        for(var i = 0; i < mf; i++){
-            var f = flakes[i];
-            ctx.moveTo(f.x, f.y);
-            ctx.arc(f.x, f.y, f.r, 0, Math.PI*2, true);
-        }
-        ctx.fill();
-        moveFlakes();
-    }
+    
     
     //animate the flakes
     var angle = 0;
@@ -75,5 +68,7 @@ window.onload = function(){
     }
    
     
-    setInterval(drawFlakes, 25);
+    setInterval(drawFlakes, speed);
 }
+
+
